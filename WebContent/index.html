@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<title>신범건</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/simple-donut.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- bxslider -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+	$(window).ready(function() {
+		draw(80, '.pie-chart1', '#ccc');
+		draw(50, '.pie-chart2', '#8b22ff');
+		draw(30, '.pie-chart3', '#ff0');
+	});
+
+	function draw(max, classname, colorname) {
+		var i = 1;
+		var func1 = setInterval(function() {
+			if (i < max) {
+				color1(i, classname, colorname);
+				i++;
+			} else {
+				clearInterval(func1);
+			}
+		}, 10);
+	}
+	function color1(i, classname, colorname) {
+		$(classname).css(
+				{
+					"background" : "conic-gradient(" + colorname + " 0% " + i
+							+ "%, #ffffff " + i + "% 100%)"
+				});
+	}
+
+	function replay() {
+		draw(80, '.pie-chart1', '#ccc');
+		draw(50, '.pie-chart2', '#8b22ff');
+		draw(30, '.pie-chart3', '#ff0');
+	}
+	$(function() {
+
+		$('.slide_gallery').bxSlider({
+			auto : true,
+			speed : 1000,
+			autoControls : false,
+			pager : true,
+		});
+	})
+</script>
+</head>
+<body>
+	<header>
+		<img alt="" src="images/main.png" style="height: 20em"> <span
+			class="main"></span>
+	</header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">SHIN Beom_Geon</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+				aria-controls="navbarColor02" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor02">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item"><a class="nav-link active" href="#">TOP
+							<span class="visually-hidden">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#About">About</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#Resume">Resume</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#Projects">Projects</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#Contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- main -->
+	<section>
+		<article id="About">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">About</h2>
+						<p style="text-align: center;">국가원로자문회의의 의장은 직전대통령이 된다. 다만,
+							직전대통령이 없을 때에는 대통령이 지명한다. 형사피의자 또는 형사피고인으로서 구금되었던 자가 법률이 정하는
+							불기소처분을 받거나 무죄판결을 받은 때에는 법률이 정하는 바에 의하여 국가에 정당한 보상을 청구할 수 있다.</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article id="Resume">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div>
+							<h2 style="text-align: center;">Skills</h2>
+							<div class="row">
+								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
+									<div class="card shadow-sm">
+										<h3 class="chart-title">Front-end</h3>
+										<div class="shin-chart">
+											<div class="pie-chart pie-chart1">
+												<span class="center">80%</span>
+											</div>
+										</div>
+										<div class="card-body p-4">
+											<div class="chart-label">스택1, 스택2, 스택3, 스택4, 스택5 순으로 많은
+												경험을 가지고 있습니다.</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
+									<div class="card shadow-sm">
+										<h3 class="chart-title">Front-end</h3>
+										<div class="shin-chart">
+											<div class="pie-chart pie-chart1">
+												<span class="center">80%</span>
+											</div>
+										</div>
+										<div class="card-body p-4">
+											<div class="chart-label">스택1, 스택2, 스택3, 스택4, 스택5 순으로 많은
+												경험을 가지고 있습니다.</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
+									<div class="card shadow-sm">
+										<h3 class="chart-title">Front-end</h3>
+										<div class="shin-chart">
+											<div class="pie-chart pie-chart1">
+												<span class="center">80%</span>
+											</div>
+										</div>
+										<div class="card-body p-4">
+											<div class="chart-label">스택1, 스택2, 스택3, 스택4, 스택5 순으로 많은
+												경험을 가지고 있습니다.</div>
+										</div>
+									</div>
+								</div>
+
+
+
+							</div>
+
+							<div class="row">
+								<div class="col-md-6 ">
+									<h3>java</h3>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+											style="width: 95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 ">
+									<h3>java</h3>
+									<div class="progress">
+										<div class="progress-bar bg-success" role="progressbar"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+											style="width: 95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 ">
+									<h3>java</h3>
+									<div class="progress">
+										<div class="progress-bar bg-info" role="progressbar"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+											style="width: 95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 ">
+									<h3>java</h3>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+											style="width: 95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</article>
+		<article id="Projects">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">Projects</h2>
+					</div>
+					<div class="card project_card">
+						<div class="col-md-6">
+							<div id="gallery_wrap">
+								<ul class="slide_gallery">
+									<li><img src="images/main.png"></li>
+									<li><img src="images/main.png"></li>
+									<li><img src="images/main.png"></li>
+									<li><img src="images/main.png"></li>
+									<li><img src="images/main.png"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="">
+								<div class="">
+									<b>내가 생각하는 나의 성격과 친구가 생각하는 나의 성격을 비교함으로써 겉으로 보이는 나의 모습이
+										어떠한지 파악해볼 수 있는 웹사이트</b>입니다. 성격 검사 웹사이트는 무수히 많지만 이런 유형의 웹사이트는 전혀
+									없었고, 백 엔드 개발자와 협업하는 방법을 배울 수 있는 나름 가벼운 프로젝트였기 때문에 진행하게 되었습니다.
+									<p></p>
+									<span class="">백 엔드 개발자와 협업하는 과정</span>에 관해
+									많이 배울 수 있었던 프로젝트입니다. UI &amp; UX 및 API 명세를 문서로 작성하여 소통하였습니다.
+									또한, 통신 과정에서 필요한 쿠키나 CORS 등의 개념에 대해서도 서로 많이 배울 수 있었습니다.
+									<p></p>
+									<span class="">각종 애니메이션 효과와 canvas
+										API</span> 등을 활용하여 디자인에도 공을 많이 들인 프로젝트입니다. 또한, 디자이너 없이 직접 디자인을 구상하며
+									UI &amp; UX에 대해서도 많이 고민해볼 수 있었습니다.
+									<p></p>
+									복수 페이지의 Next.js 웹사이트를 만들면서&nbsp;<span
+										class="">라우팅, CSR, SSR, SSG</span>에 대한 개념을
+									더욱 확실하게 익힐 수 있었던 프로젝트입니다.
+								</div>
+								<div class="">
+									<div class="">주요 기능</div>
+									<div class="">내가 생각하는 나의 성격 검사하기,
+										친구에게 나의 성격 평가 부탁하기, 나의 성격에 대한 나와 친구의 검사 결과 비교하기</div>
+								</div>
+								<div class="">
+									<div class="">GitHub</div>
+									<div class="">
+										<div class="">github.com/hjcdg1/personality_test_by_friends</div>
+									</div>
+								</div>
+								<div class="">
+									<div class="">도메인</div>
+									<div class="">
+										<div class="">personality-test-by-friends.com</div>
+									</div>
+								</div>
+								<div class="">
+									<div class="">Front-end</div>
+									<div class="">Next.js, React,
+										TypeScript, Sass</div>
+								</div>
+								<div class="">
+									<div class="">Back-end</div>
+									<div class="">Django, PostgreSQL</div>
+								</div>
+								<div class="">
+									<div class="">Deployment</div>
+									<div class="">Vercel, GitHub, AWS
+										(EC2, RDS, Route 53)</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="Contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">Contact</h2>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+	<!-- main_end -->
+
+
+	<footer> footer </footer>
+
+</body>
+</html>
