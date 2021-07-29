@@ -57,16 +57,19 @@
 			pager : true,
 		});
 		$('.logos').hide()
-		$('.logo_down').click(function() {
-			$(this).next().slideToggle(300)
+		$('.EduExp-content').hide()
+		$('.skill-btn').click(function() {
+			$(this).children(".logo").children(".logos").slideToggle(300)
+		});
+		$('.EduExp-btn').click(function() {
+			$(this).children().children(".EduExp-content").slideToggle(300)
 		});
 	})
 </script>
 </head>
 <body>
 	<header>
-		<img alt="" src="images/main.png"> <span
-			class="main"></span>
+		<img alt="" src="images/main.png"> <span class="main"></span>
 	</header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
@@ -91,8 +94,7 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="#skill">Skill</a> <a
 								class="dropdown-item" href="#Education">Education</a> <a
-								class="dropdown-item" href="#Experience">Experience</a> <a
-								class="dropdown-item" href="#Merit">Merit</a>
+								class="dropdown-item" href="#Experience">Experience</a>
 						</div></li>
 					<li class="nav-item"><a class="nav-link" href="#Projects">Projects</a>
 					</li>
@@ -111,9 +113,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2 style="text-align: center;">About</h2>
-						<p style="text-align: center;">국가원로자문회의의 의장은 직전대통령이 된다. 다만,
-							직전대통령이 없을 때에는 대통령이 지명한다. 형사피의자 또는 형사피고인으로서 구금되었던 자가 법률이 정하는
-							불기소처분을 받거나 무죄판결을 받은 때에는 법률이 정하는 바에 의하여 국가에 정당한 보상을 청구할 수 있다.</p>
+						<p style="text-align: center;">32살 재취업하기엔 조금 늦은감이 있지만 현시대 유망받는
+							IT업계로 새로운 도약을 하기위해 지금까지 쌓은 경력을 뒤로하고 다시 도전해보려합니다.</p>
 					</div>
 				</div>
 			</div>
@@ -127,7 +128,7 @@
 							<h2 style="text-align: center;">Skills</h2>
 							<div class="row">
 								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
-									<div class="card shadow-sm">
+									<div class="card skill-btn">
 										<h3 class="chart-title">Front-end</h3>
 										<div class="shin-chart">
 											<div class="pie-chart pie-chart1">
@@ -138,14 +139,16 @@
 											<span class="logo_down"><i class="fa fa-chevron-down"
 												aria-hidden="true"></i></span>
 											<div class="logos">
-												<img src="images/main.png">
+												<img src="images/logo/html_css_js.jpg">
+												<img src="images/logo/jQuery.png">
+												<img src="images/logo/ajax.png">
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
-									<div class="card shadow-sm">
-										<h3 class="chart-title">Front-end</h3>
+									<div class="card skill-btn">
+										<h3 class="chart-title">Back-end</h3>
 										<div class="shin-chart">
 											<div class="pie-chart pie-chart1">
 												<span class="center">80%</span>
@@ -155,24 +158,28 @@
 											<span class="logo_down"><i class="fa fa-chevron-down"
 												aria-hidden="true"></i></span>
 											<div class="logos">
-												<img src="images/main.png">
+												<img src="images/logo/java.png">
+												<img src="images/logo/javaSpring.png">
+												<img src="images/logo/MyBatis.png">
+												<img src="images/logo/mysql.png">
+												<img src="images/logo/python.png">
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-6 col-lg-3 mx-auto mb-4">
-									<div class="card shadow-sm">
-										<h3 class="chart-title">Front-end</h3>
-										<div class="shin-chart">
-											<div class="pie-chart pie-chart1">
-												<span class="center">80%</span>
-											</div>
-										</div>
+									<div class="card skill-btn">
+										<h3 class="chart-title">TOOL</h3>
 										<div class="card-body logo">
 											<span class="logo_down"><i class="fa fa-chevron-down"
 												aria-hidden="true"></i></span>
 											<div class="logos">
-												<img src="images/main.png">
+												<img src="images/logo/eclipse.png">
+												<img src="images/logo/DBeaver.png">
+												<img src="images/logo/eXERD.png">
+												<img src="images/logo/tomcat.png">
+												<img src="images/logo/github.png">
+												<img src="images/logo/Gradle.png">
 											</div>
 										</div>
 									</div>
@@ -183,7 +190,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="Education">
+			<div id="Education" class="EduExp">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -191,107 +198,104 @@
 						</div>
 					</div>
 					<div>
-						<div class="d-flex card">
-							<div class="d-flex">
+						<div class="row d-flex card EduExp-btn">
+							<div class="col-md-1">
 								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
 							</div>
-							<div>
+							<div class="col-md-11">
 								<span class="date">2021.01~2021.07</span>
 								<h2>(디지털컨버전스)JAVA기반 웹 융합 응용SW 개발</h2>
 								<span class="position">영남인재교육원</span>
-								<p>JAVA 웹 프로그램 개발자 양성과정을 수강하였습니다. 기본적으로 객체지향이 무엇인가? 부 터 시작하여
-									MySQL, JavaScript, HTML/CSS, Spring, MyBatis 등 웹 개발에 필요한 전반적인
-									것들을 배울 수 있었으며, 성적관리프로그램 구현 프로젝트부터 쇼핑몰 구현 프로젝트까지 완료하였습니다. 팀 페어
-									활동을 통해 다른 사람과 소통하면서 프로그래밍한다는 것이 얼마나 중요한지 알게 되었고, 원하는 개발을 하기 위해
-									끊임없이 노력하여야 한다는 것을 깨달았습니다.</p>
+							</div>
+							<div class="EduExp-content-border col-md-12">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<p class="EduExp-content">JAVA 웹 프로그램 개발자 양성과정을 수강하였습니다.
+									기본적으로 객체지향이 무엇인가? 부 터 시작하여 MySQL, JavaScript, HTML/CSS, Spring,
+									MyBatis 등 웹 개발에 필요한 전반적인 것들을 배울 수 있었으며, 학생관리프로그램 구현 프로젝트부터 쇼핑몰
+									구현 프로젝트까지 완료하였습니다. 팀 활동을 통해 다른 사람과 소통하면서 프로그래밍한다는 것이 얼마나 중요한지
+									알게 되었고, 원하는 개발을 하기 위해 끊임없이 노력하여야 한다는 것을 깨달았습니다.</p>
 							</div>
 						</div>
-						<div class="d-flex card">
-							<div class="d-flex">
+						<div class="row d-flex card EduExp-btn">
+							<div class="col-md-1">
 								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
 							</div>
-							<div>
-								<span class="date">2015.03-2017.02</span>
+							<div class="col-md-11">
+								<span class="date">2021.01~2021.07</span>
 								<h2>전기 자동화</h2>
-								<span class="position">영남이공대학교</span>
-								<p>구미 대학교 마케팅경영학과(야간)를 졸업하였습니다. 당시 품질관리사원으로 일하면서 주경야독하였습니다.
-									당시 마케팅 서비스에 많은 관심이 있었고 CS 관리사, 유통관리사 2급을 취득하며 다양한 지식을 습득하고자
-									노력하였습니다. 항상 노력하는 모습에 과 대표를 임하게 되었으며 도중 많은 사람을 만나게 되어 많은 것을 느끼게
-									되었습니다. 사람을 만나는 것은 엄청난 경험이라 생각했고 후에 캐나다에 가게 되는 계기가 되었습니다.</p>
+								<span class="position">영남공대학교</span>
+							</div>
+							<div class="EduExp-content-border col-md-12">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<p class="EduExp-content">영남이공대학교를 졸업하였습니다. 전기자동화과를 전공하였으며 ,
+									항상 긍정적인 마음을 형성하는데 아주 많은 이바지를 했다고 생각합니다.</p>
 							</div>
 						</div>
-						<div class="d-flex card">
-							<div class="d-flex">
+						<div class="row d-flex card EduExp-btn">
+							<div class="col-md-1">
 								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
 							</div>
-							<div>
-								<span class="date">2010.03-2013.02</span>
+							<div class="col-md-11">
+								<span class="date">2021.01~2021.07</span>
 								<h2>전기</h2>
-								<span class="position">경북기계공업 고등학교</span>
-								<p>경북기계공업고등학교를 졸업하였습니다. 전기과를 전공하였으며 전기기능사, 승강기 기능사 OA 관련 자격증
-									들을 취득함으로써 사회에 나가는 발판을 마련하였고, 항상 긍정적인 마음을 형성하는데 아주 많은 이바지를 했다고
-									생각합니다. 마이스터1기 학생으로서 전기 이외의 용접, 전자, (비) 파괴시험, 밀링머신(금속), 캐드 등등….
-									여러 가지 분야의 학습을 배울 수 있었습니다.</p>
+								<span class="position">경북기계공업고등학교</span>
+							</div>
+							<div class="EduExp-content-border col-md-12">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<p class="EduExp-content">경북기계공업고등학교를 졸업하였습니다. 전기과를 전공하였으며
+									전기기능사 자격증 을 취득함으로써 사회에 나가는 발판을 마련하였고,</p>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
-			<div id="Experience">
+			<div id="Experience" class="EduExp">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<h2 style="text-align: center;">Experience</h2>
 						</div>
-						<p class="col-md-12" style="text-align: center;">
-							<strong>현재 개발로서는 큰 도움은 되지 않을 수 있지만, 회사에서 필요로 한다면
-									이런 역량도 가지고 있습니다.</strong>
-						</p>
+						<p class="col-md-12" style="text-align: center;">현재 개발로서는 큰
+							도움은 되지 않을 수 있지만, 회사에서 필요로 한다면 이런 역량도 가지고 있습니다.</p>
 					</div>
 					<div>
-						<div class="d-flex card">
-							<div class="d-flex">
+						<div class="row d-flex card EduExp-btn">
+							<div class="col-md-1">
 								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
 							</div>
-							<div>
+							<div class="col-md-11">
 								<span class="date">2021.01~2021.07</span>
-								<h2>(디지털컨버전스)JAVA기반 웹 융합 응용SW 개발</h2>
-								<span class="position">영남인재교육원</span>
-								<p>JAVA 웹 프로그램 개발자 양성과정을 수강하였습니다. 기본적으로 객체지향이 무엇인가? 부 터 시작하여
-									MySQL, JavaScript, HTML/CSS, Spring, MyBatis 등 웹 개발에 필요한 전반적인
-									것들을 배울 수 있었으며, 성적관리프로그램 구현 프로젝트부터 쇼핑몰 구현 프로젝트까지 완료하였습니다. 팀 페어
-									활동을 통해 다른 사람과 소통하면서 프로그래밍한다는 것이 얼마나 중요한지 알게 되었고, 원하는 개발을 하기 위해
-									끊임없이 노력하여야 한다는 것을 깨달았습니다.</p>
+								<h2>PLC(전기 자동화프로그램)</h2>
+								<span class="position">자동화 설비 유지보수팀 (경력5년)</span>
+							</div>
+							<div class="EduExp-content-border col-md-12">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<p class="EduExp-content">코딩언어 전문 프로그램은 아니지만 자동화 설비의 '뇌'라고
+									할수있는 프로그램 입니다. 전기쪽으로 취업하여 설비의 센서나 공압 및 유압 설비의 동작 을 제어하는 프로그램을
+									짜왔습니다. 제가 코딩을 남들보다 조금이나마 빠른속도로 배워지는 이유가 이러한 자동화 프로그램들을 만지고 이해하며
+									내것처럼 다뤄왓기 때문이라고 생각합니다.</p>
 							</div>
 						</div>
-						<div class="d-flex card">
-							<div class="d-flex">
+						<div class="row d-flex card EduExp-btn">
+							<div class="col-md-1">
 								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
 							</div>
-							<div>
-								<span class="date">2015.03-2017.02</span>
-								<h2>전기 자동화</h2>
-								<span class="position">영남이공대학교</span>
-								<p>구미 대학교 마케팅경영학과(야간)를 졸업하였습니다. 당시 품질관리사원으로 일하면서 주경야독하였습니다.
-									당시 마케팅 서비스에 많은 관심이 있었고 CS 관리사, 유통관리사 2급을 취득하며 다양한 지식을 습득하고자
-									노력하였습니다. 항상 노력하는 모습에 과 대표를 임하게 되었으며 도중 많은 사람을 만나게 되어 많은 것을 느끼게
-									되었습니다. 사람을 만나는 것은 엄청난 경험이라 생각했고 후에 캐나다에 가게 되는 계기가 되었습니다.</p>
+							<div class="col-md-11">
+								<span class="date">2021.01~2021.07</span>
+								<h2>유지보수 능력</h2>
+								<span class="position">자동화 설비 유지보수팀 (경력5년)</span>
+							</div>
+							<div class="EduExp-content-border col-md-12">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<p class="EduExp-content">현상태를 보전하며 새로운 개선방안이 있는 사항 같은경우에는
+									직접 프로그램을 바꾸고 전기작업 및 기계작업 등을 했습니다. 현재 만들어진 많은 프로그램들로 유지보수가 필요한것을
+									보고 제가 일해온 유지보수 하는것에 있어서의 센스 즉 문제발생시 그 문제점의 원인 파악 및 빠른조치를하던 그
+									센스로 가각의 언어에 대한 이해도를 계속 공부하다보면 많은 언어로 이루어진 이 프로그램 코드들도 수정 가능 하다고
+									봅니다.</p>
 							</div>
 						</div>
-						<div class="d-flex card">
-							<div class="d-flex">
-								<i class="fa fa-university fa-2x" aria-hidden="true"></i>
-							</div>
-							<div>
-								<span class="date">2010.03-2013.02</span>
-								<h2>전기</h2>
-								<span class="position">경북기계공업 고등학교</span>
-								<p>경북기계공업고등학교를 졸업하였습니다. 전기과를 전공하였으며 전기기능사, 승강기 기능사 OA 관련 자격증
-									들을 취득함으로써 사회에 나가는 발판을 마련하였고, 항상 긍정적인 마음을 형성하는데 아주 많은 이바지를 했다고
-									생각합니다. 마이스터1기 학생으로서 전기 이외의 용접, 전자, (비) 파괴시험, 밀링머신(금속), 캐드 등등….
-									여러 가지 분야의 학습을 배울 수 있었습니다.</p>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>
@@ -303,55 +307,147 @@
 						<h2 style="text-align: center;">Projects</h2>
 					</div>
 				</div>
+				<!-- 이런신발 -->
 				<div class="card project_card">
 					<div class="row">
 						<div class="col-sm-6">
 							<div id="gallery_wrap">
 								<ul class="slide_gallery">
-									<li><img src="images/main.png"></li>
-									<li><img src="images/main.png"></li>
-									<li><img src="images/main.png"></li>
-									<li><img src="images/main.png"></li>
-									<li><img src="images/main.png"></li>
+									<li><img src="images/shose/shose2.png"></li>
+									<li><img src="images/shose/shose1.png"></li>
+									<li><img src="images/shose/shose3.png"></li>
+									<li><img src="images/shose/shose4.png"></li>
+									<li><img src="images/shose/shose5.png"></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="">
+								<h4>신발 쇼핑몰</h4>
 								<div class="">
-									<p><b>내가 생각하는 나의 성격과 친구가 생각하는 나의 성격을 비교함으로써 겉으로 보이는 나의 모습이
-										어떠한지 파악해볼 수 있는 웹사이트</b>입니다. 성격 검사 웹사이트는 무수히 많지만 이런 유형의 웹사이트는 전혀
-									없었고, 백 엔드 개발자와 협업하는 방법을 배울 수 있는 나름 가벼운 프로젝트였기 때문에 진행하게 되었습니다.
+									<p>
+										신발 전문으로 파는 쇼핑몰로써 현재 운영중인 쇼핑몰들을 참고하여 실사용이 가능하도록 만든 첫 팀프로잭트입니다.
+										<br> 인원은 3명으로 이루어져 제가 팀장을 맞아 각각 업무 분배를 하고 데이터베이스의 기본 테이블
+										구성 및 관계설정 등을 했고 쇼핑몰의 메인인 상품관리 구매 장바구니기능 메인화면까지 하며 팀원들 코드를 봐주며
+										프로잭트를 진행했습니다. <br> 서버는 구글 클라우드 서비스를 통해 가상서버 구축 후 배포중입니다.
 									</p>
 								</div>
 								<div class="">
 									<div class="">주요 기능</div>
-									<div class="">내가 생각하는 나의 성격 검사하기, 친구에게 나의 성격 평가 부탁하기, 나의
-										성격에 대한 나와 친구의 검사 결과 비교하기</div>
+									<p>내가 생각하는 나의 성격 검사하기, 친구에게 나의 성격 평가 부탁하기, 나의 성격에 대한 나와 친구의
+										검사 결과 비교하기</p>
 								</div>
 								<div class="">
 									<div class="">GitHub</div>
 									<div class="">
-										<div class="">github.com/hjcdg1/personality_test_by_friends</div>
+										<a href="https://github.com/shinws9090/proj21_shoes">
+											github.com/shinws9090/proj21_shoes</a>
 									</div>
 								</div>
 								<div class="">
 									<div class="">도메인</div>
 									<div class="">
-										<div class="">personality-test-by-friends.com</div>
+										<a href="http://pro21shose.com/index">
+											pro21shose.com/index</a>
 									</div>
 								</div>
 								<div class="">
 									<div class="">Front-end</div>
-									<div class="">Next.js, React, TypeScript, Sass</div>
+									<div class="">JavaScript, JQurey, Ajax, HTML, CSS</div>
 								</div>
 								<div class="">
 									<div class="">Back-end</div>
-									<div class="">Django, PostgreSQL</div>
+									<div class="">JAVA, JavaSpring, MyBatis, Mysql</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 학생관리 -->
+				<div class="card project_card">
+					<div class="row">
+						<div class="col-sm-6">
+							<div id="gallery_wrap">
+								<ul class="slide_gallery">
+									<li><img src="images/student/student1.png"></li>
+									<li><img src="images/student/student2.png"></li>
+									<li><img src="images/student/student3.png"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="">
+								<h4>학생관리 프로그램</h4>
+								<div class="">
+									<p>
+										학원 교육 2개월차에 만든 첫 프로잭트 입니다. 임의의 학교에서 선생들이 학생관리를 보다 편하게 할수있도록
+										만들어본 프로잭트 입니다. <br>
+										java의 객체지향의미를 공부하기위해 시작 한 프로잭트로써 실사용 보다는 개인 복습위주로 만들어져 다양한 기능은 없습니다.
+											
+									</p>
 								</div>
 								<div class="">
-									<div class="">Deployment</div>
-									<div class="">Vercel, GitHub, AWS (EC2, RDS, Route 53)</div>
+									<div class="">주요 기능</div>
+									<p>학생 관리, 성적 관리, 학생 검색기능</p>
+								</div>
+								<div class="">
+									<div class="">GitHub</div>
+									<div class="">
+										<a href="https://github.com/shinws9090/shin_student2">
+											github.com/shinws9090/shin_student2</a>
+									</div>
+								</div>
+								<div class="">
+									<div class="">소개 PPT</div>
+									<div class="">
+										<a href="ppt/학생 관리 프로그램2.pptx">학생 관리 프로그램2.pptx
+											</a>
+									</div>
+								</div>
+								<div class="">
+									<div class="">Front-end</div>
+									<div class="">Swing</div>
+								</div>
+								<div class="">
+									<div class="">Back-end</div>
+									<div class="">JAVA, JDBC, Mysql</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 포트폴리오 -->
+				<div class="card project_card">
+					<div class="row">
+						<div class="col-sm-6">
+							<div id="gallery_wrap">
+								<ul class="slide_gallery">
+									<li><img src="images/portfolio/portfolio1.png"></li>
+									<li><img src="images/portfolio/portfolio2.png"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="">
+								<h4>개인 포트폴리오 사이트</h4>
+								<div class="">
+									<p>
+										현재 보고계신 포트폴리오 입니다. 템플릿이 아닌 처음부터 지금 보고계신것까지 직접 손으로 빚은 사이트입니다. <br>
+										GitHub 무료 page배포 서비스를 이용해 만들었고 정적인 사이트만 할수있어
+										html로 현재 패이지만 보실수있습니다. <br>
+										모바일 화면 구현 해놧습니다.
+									</p>
+								</div>
+								<div class="">
+									<div class="">GitHub</div>
+									<div class="">
+										<a href="https://github.com/shinws9090/beom_portfolio">
+											github.com/shinws9090/beom_portfolio</a>
+									</div>
+								</div>
+								<div class="">
+									<div class="">Front-end</div>
+									<div class="">HTML, CSS, JavaScript, JQurey,</div>
 								</div>
 							</div>
 						</div>
@@ -367,70 +463,63 @@
 					</div>
 				</div>
 				<div class="row d-flex contact-info mb-5">
-					<div
-						class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
-						<div class="align-self-stretch box text-center p-4 shadow">
-							<div
-								class="icon d-flex align-items-center justify-content-center">
-								<span class="icon-map-signs"></span>
+					<div class="col-md-6 col-lg-3 d-flex p-2">
+						<div class="card text-center p-3">
+							<div class="icon">
+								<i class="fa fa-address-card fa-3x" aria-hidden="true"></i>
 							</div>
 							<div>
 								<h3 class="mb-4">Address</h3>
-								<p>대한민국 대구광역시 남구 현충로39길 26 3층</p>
+								<p>대한민국 대구광역시 달서구 상인동 상인화성파크드림 1단지 1107동 2102호</p>
 							</div>
 						</div>
 					</div>
-					<div
-						class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
-						<div class="align-self-stretch box text-center p-4 shadow">
-							<div
-								class="icon d-flex align-items-center justify-content-center">
-								<span class="icon-phone2"></span>
+					<div class="col-md-6 col-lg-3 d-flex p-2">
+						<div class="card text-center p-3">
+							<div class="icon">
+								<i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
 							</div>
 							<div>
 								<h3 class="mb-4">Contact Number</h3>
 								<p>
-									<a href="tel://01087538317">+82 010 8753 8317</a>
+									<a href="tel://01087538317">+82 010 7101 0555</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div
-						class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
-						<div class="align-self-stretch box text-center p-4 shadow">
-							<div
-								class="icon d-flex align-items-center justify-content-center">
-								<span class="icon-paper-plane"></span>
+					<div class="col-md-6 col-lg-3 d-flex p-2">
+						<div class="card text-center p-3">
+							<div class="icon">
+								<i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
 							</div>
 							<div>
 								<h3 class="mb-4">Email Address</h3>
 								<p>
-									<a href="mailto:stpn94@gmail.com">stpn94@gmail.com</a>
+									<a href="mailto:stpn94@gmail.com">shinws9090@naver.com</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div
-						class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
-						<div class="align-self-stretch box text-center p-4 shadow">
-							<div
-								class="icon d-flex align-items-center justify-content-center">
-								<span class="icon-paper-plane"></span>
+					<div class="col-md-6 col-lg-3 d-flex p-2">
+						<div class="card text-center p-3">
+							<div class="icon">
+								<i class="fa fa-github fa-3x" aria-hidden="true"></i>
 							</div>
 							<div>
 								<h3 class="mb-4">GitHub</h3>
 								<p>
-									<a href="">In ready.</a>
+									<a href="https://github.com/shinws9090">github.com/shinws9090</a>
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="row no-gutters block-9">
-					<div class="col-md-6 order-md-last d-flex">
+					<div class="col-md-6 order-md-last">
 						<form name="sentMessage" id="contactForm" novalidate=""
 							action="https://formspree.io/f/mayadpwz" method="post"
-							class="bg-light p-4 p-md-5 contact-form">
+							class="card p-4 p-md-5 contact-form">
 							<div class="control-group">
 								<div class="form-group floating-label-form-group controls">
 									<input type="text" class="form-control" placeholder="Your Name"
@@ -453,16 +542,17 @@
 										class="form-control" placeholder="Message" required=""
 										data-validation-required-message=""></textarea>
 								</div>
-								<div class="form-group floating-label-form-group controls">
+								<div
+									class="text-center form-group floating-label-form-group controls">
 									<input type="submit" id="sendMessageButton"
-										value="Send Message" class="btn btn-primary py-3 px-5">
+										value="Send Message" class="btn btn-outline-light py-3 px-5">
 								</div>
 							</div>
 						</form>
 					</div>
 
 					<div class="col-md-6 d-flex">
-						<!-- <div class="img" style="background-image: url(images/about.jpg);"></div> -->
+						<div class="img" style="background-image: url(images/main.png);"></div>
 					</div>
 				</div>
 			</div>
