@@ -18,23 +18,12 @@
 <!-- 아이콘 -->
 <script src="https://use.fontawesome.com/5aa04f9336.js"></script>
 <script type="text/javascript">
+	/* 그래프 색 표현 */
 	$(window).ready(function() {
-		draw(80, '.pie-chart1', '#ccc');
-		draw(50, '.pie-chart2', '#8b22ff');
-		draw(30, '.pie-chart3', '#ff0');
+		color1(70, '.pie-chart1', '#ccc');
+		color1(60, '.pie-chart2', '#ccc');
 	});
-
-	function draw(max, classname, colorname) {
-		var i = 1;
-		var func1 = setInterval(function() {
-			if (i < max) {
-				color1(i, classname, colorname);
-				i++;
-			} else {
-				clearInterval(func1);
-			}
-		}, 10);
-	}
+	
 	function color1(i, classname, colorname) {
 		$(classname).css(
 				{
@@ -43,19 +32,16 @@
 				});
 	}
 
-	function replay() {
-		draw(80, '.pie-chart1', '#ccc');
-		draw(50, '.pie-chart2', '#8b22ff');
-		draw(30, '.pie-chart3', '#ff0');
-	}
 	$(function() {
-
+		/* 프로잭트 슬라이드 */
 		$('.slide_gallery').bxSlider({
 			auto : true,
 			speed : 1000,
 			autoControls : false,
 			pager : true,
 		});
+		
+		/* 토글 */
 		$('.logos').hide()
 		$('.EduExp-content').hide()
 		$('.skill-btn').click(function() {
@@ -69,7 +55,7 @@
 </head>
 <body>
 	<header>
-		<img alt="" src="images/main.png"> <span class="main"></span>
+		<img alt="" src="images/main.jpg"> <span class="main"></span>
 	</header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
@@ -114,7 +100,7 @@
 					<div class="col-md-12">
 						<h2 style="text-align: center;">About</h2>
 						<p style="text-align: center;">32살 재취업하기엔 조금 늦은감이 있지만 현시대 유망받는
-							IT업계로 새로운 도약을 하기위해 지금까지 쌓은 경력을 뒤로하고 다시 도전해보려합니다.</p>
+							IT업계로 새로운 도약을 하기위해 <br> 지금까지 쌓은 경력을 뒤로하고 다시 도전해보려합니다.</p>
 					</div>
 				</div>
 			</div>
@@ -131,8 +117,8 @@
 									<div class="card skill-btn">
 										<h3 class="chart-title">Front-end</h3>
 										<div class="shin-chart">
-											<div class="pie-chart pie-chart1">
-												<span class="center">80%</span>
+											<div class="pie-chart pie-chart2">
+												<span class="center">60%</span>
 											</div>
 										</div>
 										<div class="card-body logo">
@@ -151,7 +137,7 @@
 										<h3 class="chart-title">Back-end</h3>
 										<div class="shin-chart">
 											<div class="pie-chart pie-chart1">
-												<span class="center">80%</span>
+												<span class="center">70%</span>
 											</div>
 										</div>
 										<div class="card-body logo">
@@ -228,7 +214,9 @@
 							<div class="EduExp-content-border col-md-12">
 								<i class="fa fa-chevron-down" aria-hidden="true"></i>
 								<p class="EduExp-content">영남이공대학교를 졸업하였습니다. 전기자동화과를 전공하였으며 ,
-									항상 긍정적인 마음을 형성하는데 아주 많은 이바지를 했다고 생각합니다.</p>
+									소트프웨어 제작과는 연관이 없지만 자동화 프로그램을 배우면서 알게된  and/or연산자 같은 
+									프로그램에서도 똑같은 의미로 생각할수있는 개념들을 배워서 이번 교육과정을 배울때 도움이 되었습니다.
+								</p>
 							</div>
 						</div>
 						<div class="row d-flex card EduExp-btn">
@@ -243,7 +231,8 @@
 							<div class="EduExp-content-border col-md-12">
 								<i class="fa fa-chevron-down" aria-hidden="true"></i>
 								<p class="EduExp-content">경북기계공업고등학교를 졸업하였습니다. 전기과를 전공하였으며
-									전기기능사 자격증 을 취득함으로써 사회에 나가는 발판을 마련하였고,</p>
+									전기기능사 자격증 을 취득함으로써 사회에 나가는 발판을 마련하여 IT업계로 오기전 전기라는 전공을
+									살려 일을 하게되었습니다.</p>
 							</div>
 						</div>
 
@@ -289,10 +278,10 @@
 							<div class="EduExp-content-border col-md-12">
 								<i class="fa fa-chevron-down" aria-hidden="true"></i>
 								<p class="EduExp-content">현상태를 보전하며 새로운 개선방안이 있는 사항 같은경우에는
-									직접 프로그램을 바꾸고 전기작업 및 기계작업 등을 했습니다. 현재 만들어진 많은 프로그램들로 유지보수가 필요한것을
-									보고 제가 일해온 유지보수 하는것에 있어서의 센스 즉 문제발생시 그 문제점의 원인 파악 및 빠른조치를하던 그
-									센스로 가각의 언어에 대한 이해도를 계속 공부하다보면 많은 언어로 이루어진 이 프로그램 코드들도 수정 가능 하다고
-									봅니다.</p>
+									직접 프로그램을 바꾸고 전기작업 및 기계작업 등을 했습니다. <br>
+									 현재 만들어진 많은 프로그램들로 유지보수가 필요한것을 보고 제가 일해온 유지보수 하는것에 있어서의 센스 즉 문제발생시 
+									 그 문제점의 원인 파악 및 빠른조치를하던 센스로 가각의 언어에 대한 이해도를 계속 공부하다보면 많은 언어로 이루어진 이 
+									 프로그램 코드들도 수정 가능 하다고 봅니다.</p>
 							</div>
 						</div>
 
@@ -482,7 +471,7 @@
 							<div>
 								<h3 class="mb-4">Contact Number</h3>
 								<p>
-									<a href="tel://01087538317">+82 010 7101 0555</a>
+									<a href="tel://01071010555">+82 010 7101 0555</a>
 								</p>
 							</div>
 						</div>
@@ -495,7 +484,7 @@
 							<div>
 								<h3 class="mb-4">Email Address</h3>
 								<p>
-									<a href="mailto:stpn94@gmail.com">shinws9090@naver.com</a>
+									<a href="mailto:shinws9090@naver.com">shinws9090@naver.com</a>
 								</p>
 							</div>
 						</div>
@@ -553,7 +542,7 @@
 					</div>
 
 					<div class="col-md-6 d-flex">
-						<div class="img" style="background-image: url(images/main.png);"></div>
+						<div class="img" style="background: url(images/no_image.png); background-size: 100%"></div>
 					</div>
 				</div>
 			</div>
