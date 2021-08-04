@@ -6,10 +6,10 @@
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-<title>신범건</title>
-<link rel="stylesheet" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<title>신범건</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link rel="stylesheet" href="css/style.css">
 <!-- bxslider -->
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
@@ -50,6 +50,14 @@
 		$('.EduExp-btn').click(function() {
 			$(this).children().children(".EduExp-content").slideToggle(300)
 		});
+		
+		$('.light-mode').click(function(){
+			if($(this).is(':checked') == true){
+				$('body').addClass('light-theme');
+			}else{
+				$('body').removeClass('light-theme');
+			}
+		})
 	})
 </script>
 </head>
@@ -60,6 +68,9 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">SHIN Beom_Geon</a>
+			<div class="form-check form-switch">
+        		<input class="form-check-input light-mode " type="checkbox" id="lexSwitchCheckDefault">
+     		</div>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarColor02"
 				aria-controls="navbarColor02" aria-expanded="false"

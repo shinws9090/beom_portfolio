@@ -145,7 +145,7 @@ span.center {
 	margin-top: 2em;
 }
 .EduExp-content-border{
-	border: solid 1px #403d3d;
+	border: solid 1px #fff;
 	border-radius:0.5em;
 	padding-bottom: 0.2rem;
 	padding-top: 0.2rem;
@@ -176,8 +176,34 @@ span.center {
 
 /* 기타 */
 .card{
-	animation: show 2s 2s infinite alternate;
+	animation: dark 2s 2s infinite alternate;
 }
-@keyframes show {
+@keyframes dark {
 	 100% {box-shadow: 0 0 1rem 0 rgb(255 255 255/ 10%);}
+}
+@keyframes light {
+	 100% {box-shadow: 0 0 1rem 0 rgb(130 255 243);}
+}
+
+/* 라이트테마 */
+body, 
+.card,
+span.center{
+	transition: 0.5s;
+}
+body.light-theme {
+	background-color: #fff;
+	color: #6d6d6d;
+}
+body.light-theme a{
+	color: #6d6d6d;
+}
+body.light-theme .card,
+body.light-theme span.center{
+	color: #fff;
+	background-color: #78c2ad;
+	animation: light 2s 2s infinite alternate;
+}
+body.light-theme nav.bg-dark{
+	background-color: #78c2ad !important;
 }
