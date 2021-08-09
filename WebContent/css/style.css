@@ -10,7 +10,7 @@ p{
 
 .main {
 	width: 100%;
-	height: 20em;
+	
 }
 
 .me-auto {
@@ -39,14 +39,14 @@ article {
 article {
 	padding-top: 10%;
 }
-/* ¹İÀÀÇü */
+/* Â¹ÃÃ€Ã€Ã‡Ã¼ */
 @media ( min-width : 992px) {
 	article {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
 	header img {
-		height: 15rem;
+		
 		width: 100%;
 	}
 	.navbar-expand-lg .navbar-nav .nav-link {
@@ -73,7 +73,7 @@ article {
 		margin-right: 10%;
 	}
 	header img {
-		height: 10rem;
+		
 		width: 100%;
 	}
 }
@@ -174,7 +174,7 @@ span.center {
 	height: 100%
 }
 
-/* ±âÅ¸ */
+/* Â±Ã¢Ã…Â¸ */
 .card{
 	animation: dark 2s 2s infinite alternate;
 }
@@ -185,7 +185,7 @@ span.center {
 	 100% {box-shadow: 0 0 1rem 0 rgb(130 255 243);}
 }
 
-/* ¶óÀÌÆ®Å×¸¶ */
+/* Â¶Ã³Ã€ÃŒÃ†Â®Ã…Ã—Â¸Â¶ */
 body, 
 .card,
 span.center{
